@@ -39,6 +39,6 @@ function onFormSubmit(event) {
     loginInfo.mail = mail;
     loginInfo.password = password;
 
-    console.log(`Я хочу плакать как маленькая девочка. Почему оно не выводит?:`, loginInfo)
+    console.log(`Я хочу плакать как маленькая девочка, но я сделал это:`, loginInfo)
 
 }
