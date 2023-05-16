@@ -15,28 +15,16 @@ const images = [
 
 const listGalary = document.querySelector('.gallery');
 
-
 images.forEach((image) => {
+  const item = `
+    <li>
+      <img src="${image.url}" alt="${image.alt}" width="250" height="150">
+    </li>
+  `;
 
-  const galaryTopForThisPrise = document.createElement('img');
-
-  galaryTopForThisPrise.width = 250;
-
-  galaryTopForThisPrise.height = 150;
-
-
-  galaryTopForThisPrise.src = image.url;
-
-  galaryTopForThisPrise.alt = image.alt;
-
-  const item = document.createElement('li');
-
-  item.appendChild(galaryTopForThisPrise);
-
-  listGalary.appendChild(item);
-
-  listGalary.classList.add('animals-list')
-
-  console.log(item);
-
+  listGalary.insertAdjacentHTML('beforeend', item);
 });
+
+listGalary.classList.add('animals-list');
+
+console.log(listGalary);

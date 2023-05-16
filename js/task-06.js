@@ -8,7 +8,7 @@ function onInputChange(event) {
   const inputLength = event.target.value.length;
   const requiredLength = parseInt(inputEl.getAttribute('data-length'));
 
-  if (inputLength >= requiredLength) {
+  if (inputLength === requiredLength) {
     inputEl.classList.remove('invalid');
     inputEl.classList.add('valid');
   } else {
